@@ -1,0 +1,289 @@
+/* ================== Variables ================== */
+:root{
+  --bg:#fff8ea;
+  --paper:#ffffff;
+  --ink:#1e1b16;
+  --ink-soft:#4b4336;
+
+  --brand:#f59e0b;        /* dorado cálido */
+  --brand-dark:#008080;   /* hover sólido */
+
+  --brand-2:#008080;      /* teal q pidio la jefa */
+  --brand-2-dark:#005656; /* darker teal */
+
+  --accent:#008080;       /* teal (WhatsApp) */
+  --accent-dark:#15803d;  /* hover sólido */
+
+  --rose:#ef4444;
+  --shadow:0 10px 30px rgba(0,0,0,.08);
+  --radius:18px;
+
+  --border:#e5e7eb;
+}
+
+/* ================== Reset mínimo ================== */
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+
+/* ================== Base ================== */
+body{
+  font-family:'Quicksand', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--ink);
+  background:
+    radial-gradient(1200px 400px at -10% -10%, rgba(124,58,237,.10), transparent 60%),
+    radial-gradient(900px 300px at 110% 10%, rgba(22,163,74,.10), transparent 60%),
+    var(--bg);
+  line-height:1.6;
+}
+.container{width:min(1100px, 92%);margin-inline:auto}
+
+body {
+  font-family: 'Quicksand', system-ui, sans-serif;
+  color: var(--ink);
+  background:
+    /* Soft radial lights */
+    radial-gradient(600px 300px at 20% 15%, rgba(124,58,237,0.12), transparent 60%),
+    radial-gradient(500px 250px at 80% 70%, rgba(22,163,74,0.12), transparent 60%),
+    /* Base gradient mango -> guava */
+    linear-gradient(135deg, #F9C74F 0%, #F7A7C0 100%);
+  background-attachment: fixed;   /* subtle parallax effect */
+  background-size: cover;
+}
+
+body {
+  font-family: 'Quicksand', system-ui, sans-serif;
+  color: var(--ink);
+  background: url("img/bg-pattern.png") repeat;
+  background-size: 400px auto;   /* adjust how big the pattern looks */
+  background-attachment: fixed;  /* makes it stay still when scrolling */
+  line-height: 1.6;
+}
+
+
+
+/* ================== Header / Logo ================== */
+.logo{height:90px;width:auto;display:block}
+.brand{display:flex;align-items:center} /* solo contenedor del logo */
+
+/* ================== Nav ================== */
+.nav{
+  position:sticky;top:0;z-index:10;background:rgba(255,255,255,.85);
+  backdrop-filter:saturate(120%) blur(6px);
+  border-bottom:1px solid rgba(0,0,0,.06);
+}
+.nav__inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.nav__menu{display:flex;gap:20px;align-items:center}
+.nav__menu a{padding:8px 10px;border-radius:10px}
+.nav__menu a:hover{background:rgba(124,58,237,.09)}
+.nav__toggle{display:none;background:transparent;border:0;font-size:1.4rem}
+
+/* ================== Hero ================== */
+.hero {
+  position: relative;
+  padding: 80px 0 60px;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  color: #fff;
+
+  background: url("img/hero-bg-psy.png") no-repeat center;
+  background-size: cover;   /* siempre llena horizontal */
+  background-position: center; /* centra la bandera y ondas */
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0 40px;
+    background-position: top center; /* enfoca parte superior en móviles */
+  }
+}
+
+
+/* ================== Secciones ================== */
+.section{padding:64px 0}
+.section--soft{background:rgba(255, 255, 255, 0.893)}
+.section__title{font-size:clamp(24px,3.6vw,36px);margin:0 0 8px}
+.section__lead{margin:0 0 22px;color:var(--ink-soft)}
+.center{text-align:center}
+.mt-24{margin-top:24px}
+
+/* ================== Botones (sólidos + hover sólido) ================== */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:12px 18px;border-radius:999px;border:2px solid transparent;
+  font-weight:700;cursor:pointer;transition:background-color .18s ease, border-color .18s ease, color .18s ease, transform .02s ease;
+  box-shadow:var(--shadow);
+}
+.btn:active{transform:translateY(1px)}
+.btn:focus-visible{outline:3px solid rgba(124,58,237,.25);outline-offset:2px}
+
+/* Primario: morado sólido */
+.btn--primary{background:var(--brand-2);color:#fff}
+.btn--primary:hover{background:var(--brand-2-dark)}
+
+/* Secundario: dorado sólido */
+.btn--secondary{background:var(--brand);color:#1a130a}
+.btn--secondary:hover{background:var(--brand-dark)}
+
+/* Ghost sólido (blanco) */
+.btn--ghost{background:#fff;border-color:var(--border);color:var(--ink)}
+.btn--ghost:hover{background:#f8fafc;border-color:#d1d5db}
+
+/* WhatsApp sólido */
+.btn--whatsapp{background:var(--accent);color:#fff}
+.btn--whatsapp:hover{background:var(--accent-dark)}
+
+/* ================== Cards / Grid ================== */
+.grid{display:grid;gap:18px}
+.cards{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:var(--paper);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.card__body{padding:14px 14px 18px}
+.card h3{margin:6px 0 6px}
+.tag{display:inline-block;font-size:.8rem;color:#fff;background:var(--accent);padding:2px 8px;border-radius:999px}
+
+/* ================== About ================== */
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+.about__badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.chip{background:rgba(124,58,237,.12);color:var(--brand-2);padding:6px 10px;border-radius:999px;font-weight:600;font-size:.9rem}
+.polaroid{
+  background:#fff;border:2px solid #2222;border-bottom-width:12px;border-radius:12px;
+  transform:rotate(-2deg);box-shadow:var(--shadow);text-align:center;padding:8px
+}
+.polaroid span{display:block;font-size:.9rem;color:var(--ink-soft)}
+
+.about-section {
+  position: relative; /* Make it a positioning context */
+  z-index: 1; /* Ensure normal content sits above */
+}
+
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px; /* adjust size */
+  height: 400px; /* adjust size */
+  background: url('img/dees.bread.logo.1.png') no-repeat center/contain; 
+  opacity: 0.08; /* makes it subtle */
+  transform: translate(-50%, -50%); /* centers it */
+  z-index: -1; /* push behind content */
+}
+
+/* Make the grid a stacking context */
+.container.about {
+  position: relative;
+}
+
+/* Keep all real content above the watermark */
+.container.about > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Watermark */
+.container.about::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 35%;                 /* nudge toward the image side; try 50% to center */
+  width: clamp(280px, 42vw, 620px);
+  height: clamp(280px, 42vw, 620px);
+  background: url("../img/dees.bread.logo.1.png") no-repeat center / contain;
+  opacity: 0.08;             /* subtle; bump to 0.12 to test visibility */
+  transform: translate(-50%, -50%) rotate(-20deg);
+  z-index: 0;                /* sits behind the text/media */
+  pointer-events: none;      /* never intercept clicks */
+}
+
+
+
+/* ================== Formulario ================== */
+
+.form{background:var(--paper);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+.form__row{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}
+.form__row--split{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{font-weight:700}
+input,textarea{
+  border:1.5px solid #ddd;border-radius:14px;padding:12px 14px;font:inherit;background:#fff;
+}
+input:focus,textarea:focus{outline:none;border-color:var(--brand-2);box-shadow:0 0 0 3px rgba(124,58,237,.12)}
+.form__note{color:var(--ink-soft);font-size:.92rem;margin-top:8px}
+
+/* ================== Instagram card ================== */
+.ig {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.ig__card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--paper);
+  border-radius: var(--radius);
+  padding: 14px;
+  box-shadow: var(--shadow);
+}
+
+.ig__thumb {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  overflow: hidden;         /* asegura bordes redondeados */
+  flex-shrink: 0;
+  box-shadow: var(--shadow);
+}
+
+.ig__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.instagram {
+  background: url("img/hero-bg-psy.png") center/cover no-repeat;
+  padding: 64px 0;
+  border-radius: 18px; /* opcional */
+  color: #fff;         /* 🔑 cambia a blanco el texto por defecto */
+}
+
+.instagram .section__title,
+.instagram .section__lead {
+  color: #fff;         /* 🔑 asegura que el título y subtítulo sean blancos */
+}
+
+.ig__meta strong {
+  display: block;
+}
+
+.ig__meta span {
+  color: var(--ink-soft);
+  font-size: .9rem;
+}
+
+
+/* ================== Footer ================== */
+.footer{padding:28px 0;background:#fff}
+.footer__inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.top{opacity:.7}
+.top:hover{opacity:1}
+
+/* ================== Responsive ================== */
+@media (max-width: 860px){
+  .logo{height:44px}
+  .about{grid-template-columns:1fr}
+  .form__row--split{grid-template-columns:1fr}
+  .nav__toggle{display:inline-block}
+  .nav__menu{
+    position:absolute;right:4%;top:60px;background:#fff;border:1px solid #eee;
+    border-radius:14px;padding:10px;display:none;flex-direction:column;gap:8px;box-shadow:var(--shadow)
+  }
+  .nav__menu.open{display:flex}
+}
