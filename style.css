@@ -195,7 +195,7 @@ body {
   height: clamp(280px, 42vw, 620px);
   background: url("../img/dees.bread.logo.1.png") no-repeat center / contain;
   opacity: 0.08;             /* subtle; bump to 0.12 to test visibility */
-  transform: translate(-50%, -50%) rotate(-20deg);
+  transform: translate(-60%, -50%) rotate(-20deg);
   z-index: 0;                /* sits behind the text/media */
   pointer-events: none;      /* never intercept clicks */
 }
