@@ -4,59 +4,66 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
   <title>Dee’s Breads — Panes artesanales</title>
+  <meta
+    name="description"
+    content="Panes y horneados artesanales con frescura garantizada. Pre-orden y meet-ups de entrega. Hecho con amor boricua por una self-made chef."
+  />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://tu-dominio.com/" />
 
-  <!-- SEO -->
-  <meta name="description" content="Panes y horneados artesanales con frescura garantizada. Pre-orden y meet-ups de entrega. Hecho con amor boricua por una self-made chef.">
-  <meta name="robots" content="index,follow">
-  <link rel="canonical" href="https://tu-dominio.com/">
+  <meta name="theme-color" content="#fee4a8" />
+  <meta name="color-scheme" content="light only" />
 
-  <!-- Color del navegador -->
-  <meta name="theme-color" content="#fee4a8">
-  <meta name="color-scheme" content="light only">
+  <meta property="og:title" content="Dee’s Breads — Panes artesanales boricuas" />
+  <meta
+    property="og:description"
+    content="Pre-orden, frescura garantizada y entregas por meet-up. Vibra hippie con sazón boricua."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tu-dominio.com/" />
+  <meta property="og:image" content="img/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
-  <!-- Open Graph / Social -->
-  <meta property="og:title" content="Dee’s Breads — Panes artesanales boricuas">
-  <meta property="og:description" content="Pre-orden, frescura garantizada y entregas por meet-up. Vibra hippie con sazón boricua.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://tu-dominio.com/">
-  <meta property="og:image" content="img/og-cover.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dee’s Breads — Panes artesanales boricuas" />
+  <meta
+    name="twitter:description"
+    content="Pre-orden, frescura garantizada y entregas por meet-up. Vibra hippie con sazón boricua."
+  />
+  <meta name="twitter:image" content="img/og-cover.jpg" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Dee’s Breads — Panes artesanales boricuas">
-  <meta name="twitter:description" content="Pre-orden, frescura garantizada y entregas por meet-up. Vibra hippie con sazón boricua.">
-  <meta name="twitter:image" content="img/og-cover.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/dees.bread.logo.1.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="img/dees.bread.logo.1.png" />
+  <link rel="shortcut icon" href="img/dees.bread.logo.1.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
 
-  <!-- Favicon set -->
-  <link rel="icon" type="image/png" sizes="32x32" href="img/dees.bread.logo.1.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/dees.bread.logo.1.png">
-  <link rel="shortcut icon" href="img/dees.bread.logo.1.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-  <!-- (Opcional) Web App Manifest -->
-  <!-- <link rel="manifest" href="manifest.webmanifest"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
 
-  <!-- Fuentes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <!-- ===== NAV ===== -->
   <header class="nav">
     <div class="container nav__inner">
       <a class="brand" href="#top" aria-label="Ir al inicio">
-        <img src="img/dees.bread.logo.1.png" alt="Dee’s Breads Logo" class="logo" decoding="async">
+        <img
+          src="img/dees.bread.logo.1.png"
+          alt="Dee’s Breads Logo"
+          class="logo"
+          decoding="async"
+        />
       </a>
 
       <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
 
-      <nav class="nav__menu" role="navigation">
+      <nav class="nav__menu" role="navigation" aria-label="Navegación principal">
         <a href="#menu">Menú</a>
         <a href="#sobre">Sobre Dee</a>
         <a href="#preorden">Pre-orden</a>
@@ -66,35 +73,40 @@
     </div>
   </header>
 
-  <!-- ===== MAIN ===== -->
   <main id="top">
-    <!-- ===== HERO ===== -->
-    <!-- Nota: aplica tu background (imagen/ SVG/pattern) a .hero desde style.css -->
     <section class="hero">
       <div class="container hero__inner">
         <h1 class="hero__title">
           Panes artesanales con <span class="mark">frescura garantizada</span>
         </h1>
+
         <p class="hero__subtitle">
-          Sabor casero, vibra hippie y corazón boricua. <br />
+          Sabor casero, vibra hippie y corazón boricua.<br />
           Pre-ordena y recoge en meet-ups cerca de ti.
         </p>
+
         <div class="hero__cta">
           <a class="btn btn--primary" href="#preorden">Hacer pre-orden</a>
-          <a class="btn btn--ghost" href="https://www.instagram.com/deesbreads/" target="_blank" rel="noopener">Ver Instagram</a>
+          <a class="btn btn--ghost" href="#instagram">Ver Instagram</a>
         </div>
       </div>
     </section>
 
-    <!-- ===== MENÚ DESTACADO ===== -->
     <section id="menu" class="section">
       <div class="container">
         <h2 class="section__title">Menú destacado</h2>
-        <p class="section__lead">Ejemplos de lo que Dee suele hornear — cambia según temporada y disponibilidad.</p>
+        <p class="section__lead">
+          Ejemplos de lo que Dee suele hornear, cambia según temporada y disponibilidad.
+        </p>
 
         <div class="grid cards">
           <article class="card">
-            <img src="img/garlic.buns.png" alt="Garlic knots frescos" loading="lazy" decoding="async">
+            <img
+              src="img/garlic.buns.png"
+              alt="Garlic knots frescos"
+              loading="lazy"
+              decoding="async"
+            />
             <div class="card__body">
               <h3>Garlic Knots</h3>
               <p>Suaves, mantequillosos y perfectos para acompañar cualquier comida.</p>
@@ -103,7 +115,12 @@
           </article>
 
           <article class="card">
-            <img src="img/pepperoni.garlic.knots.png" alt="Pepperoni Garlic Knots" loading="lazy" decoding="async">
+            <img
+              src="img/pepperoni.garlic.knots.png"
+              alt="Pepperoni Garlic Knots"
+              loading="lazy"
+              decoding="async"
+            />
             <div class="card__body">
               <h3>Pepperoni Garlic Knots</h3>
               <p>Todo el sabor del ajo con un toque de pepperoni crujiente.</p>
@@ -112,7 +129,12 @@
           </article>
 
           <article class="card">
-            <img src="img/rollos.de.canela.png" alt="Rollos de canela glaseados" loading="lazy" decoding="async">
+            <img
+              src="img/rollos.de.canela.png"
+              alt="Rollos de canela glaseados"
+              loading="lazy"
+              decoding="async"
+            />
             <div class="card__body">
               <h3>Rollos de Canela</h3>
               <p>Esponjosos, aromáticos y con glaseado suave. Pide extra si te gusta dulce.</p>
@@ -121,7 +143,12 @@
           </article>
 
           <article class="card">
-            <img src="img/dees.cookies.png" alt="Dee's Cookies" loading="lazy" decoding="async">
+            <img
+              src="img/dees.cookies.png"
+              alt="Dee's Cookies"
+              loading="lazy"
+              decoding="async"
+            />
             <div class="card__body">
               <h3>Dee's Cookies</h3>
               <p>Galletas caseras con actitud. Pruébalas y entiende por qué se repiten.</p>
@@ -136,21 +163,23 @@
       </div>
     </section>
 
-    <!-- ===== SOBRE DEE ===== -->
     <section id="sobre" class="section section--soft">
       <div class="container about">
         <div class="about__copy">
           <h2 class="section__title">Sobre Dee</h2>
+
           <p>
             Self-made chef de <strong>Puerto Rico</strong>, manos bendecidas y disciplina.
-            Mis panes y horneados nacen de recetas caseras y mucha creatividad — con
-            vibra <em>hippie</em>, buena música y amor por la comunidad.
+            Mis panes y horneados nacen de recetas caseras y mucha creatividad, con vibra
+            <em>hippie</em>, buena música y amor por la comunidad.
           </p>
+
           <p>
             Cada pieza es hecha a mano, con ingredientes de calidad y
-            <strong>frescura garantizada</strong>. Pre-ordena y
-            coordinamos meet-ups para entregas cerca de ti.
+            <strong>frescura garantizada</strong>. Pre-ordena y coordinamos meet-ups para
+            entregas cerca de ti.
           </p>
+
           <div class="about__badges">
             <span class="chip">#Boricua</span>
             <span class="chip">#KitchenWitch</span>
@@ -160,108 +189,147 @@
 
         <div class="about__media">
           <div class="polaroid">
-            <img src="img/dee.hero.png" alt="Dee" loading="lazy" decoding="async">
+            <img src="img/dee.hero.png" alt="Dee" loading="lazy" decoding="async" />
             <span>Hello! 👋</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== PRE-ORDEN ===== -->
     <section id="preorden" class="section">
       <div class="container">
         <h2 class="section__title">Haz tu pre-orden</h2>
-        <p class="section__lead">Completa el formulario y te confirmamos por WhatsApp o DM.</p>
+        <p class="section__lead">Completa el formulario y te confirmamos por WhatsApp.</p>
 
         <form id="preorderForm" class="form" autocomplete="on">
           <div class="form__row">
             <label for="nombre">Nombre</label>
-            <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required>
+            <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required />
           </div>
 
           <div class="form__row">
             <label for="contacto">WhatsApp o Instagram</label>
-            <input id="contacto" name="contacto" type="text" placeholder="+1 787 555 1234 o @tuusuario" required>
+            <input
+              id="contacto"
+              name="contacto"
+              type="text"
+              placeholder="+1 787 555 1234 o @tuusuario"
+              required
+            />
           </div>
 
           <div class="form__row">
             <label for="pedido">¿Qué te antoja?</label>
-            <textarea id="pedido" name="pedido" rows="4" placeholder="Pan sobao x2 y rollos de canela x6 para sábado" required></textarea>
+            <textarea
+              id="pedido"
+              name="pedido"
+              rows="4"
+              placeholder="Pan sobao x2 y rollos de canela x6 para sábado"
+              required
+            ></textarea>
           </div>
 
           <div class="form__row form__row--split">
             <div>
               <label for="fecha">Fecha preferida</label>
-              <input id="fecha" name="fecha" type="date" required>
+              <input id="fecha" name="fecha" type="date" required />
             </div>
+
             <div>
               <label for="zona">Zona / Meet-up</label>
-              <input id="zona" name="zona" type="text" placeholder="Área o punto de encuentro" required>
+              <input
+                id="zona"
+                name="zona"
+                type="text"
+                placeholder="Área o punto de encuentro"
+                required
+              />
             </div>
           </div>
 
           <button class="btn btn--primary" type="submit">Enviar pre-orden</button>
-          <p class="form__note">* Precios y disponibilidad se confirman por mensaje. Producción limitada.</p>
+          <p class="form__note">
+            * Precios y disponibilidad se confirman por mensaje. Producción limitada.
+          </p>
         </form>
       </div>
     </section>
 
-    <!-- ===== ENTREGAS ===== -->
     <section id="entregas" class="section section--soft">
       <div class="container">
-        <h2 class="section__title">Entregas & meet-ups</h2>
+        <h2 class="section__title">Entregas &amp; meet-ups</h2>
         <ul class="list">
-          <li>Entregas por <strong>meet-up</strong> coordinado (puntos y horarios se confirman por mensaje).</li>
-          <li><strong>Pre-orden</strong> para garantizar frescura y evitar desperdicio.</li>
-          <li>Pequeños <strong>batches</strong> — todo sale recién horneado.</li>
+          <li>
+            Entregas por <strong>meet-up</strong> coordinado. Puntos y horarios se confirman por
+            mensaje.
+          </li>
+          <li>
+            <strong>Pre-orden</strong> para garantizar frescura y evitar desperdicio.
+          </li>
+          <li>
+            Pequeños <strong>batches</strong>, todo sale recién horneado.
+          </li>
         </ul>
       </div>
     </section>
 
-<!-- ===== INSTAGRAM ===== -->
-<section class="section instagram" aria-labelledby="instagram">
-  <div class="container">
-    <h2 id="instagram" class="section__title">Síguenos en Instagram</h2>
-    <p class="section__lead">Mira los últimos reels, stories y menú semanal.</p>
+    <section id="instagram" class="section instagram" aria-labelledby="instagram-title">
+      <div class="container">
+        <h2 id="instagram-title" class="section__title">Síguenos en Instagram</h2>
+        <p class="section__lead">Mira los últimos reels, stories y menú semanal.</p>
 
-    <div class="ig">
-      <a class="ig__card" href="https://www.instagram.com/deesbreads/" target="_blank" rel="noopener" aria-label="Abrir Instagram de Dee’s Breads">
-        <div class="ig__thumb">
-          <img src="img/dees.bread.logo.1.png" alt="Dee's Breads Instagram" loading="lazy" decoding="async">
+        <div class="ig">
+          <a
+            class="ig__card"
+            href="https://www.instagram.com/deesbreads/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Abrir Instagram de Dee’s Breads"
+          >
+            <div class="ig__thumb">
+              <img
+                src="img/dees.bread.logo.1.png"
+                alt="Dee's Breads Instagram"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+
+            <div class="ig__meta">
+              <strong>@deesbreads</strong>
+              <span>Instagram</span>
+            </div>
+          </a>
         </div>
-        <div class="ig__meta">
-          <strong>@deesbreads</strong>
-          <span>Instagram</span>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
+      </div>
+    </section>
 
-
-    <!-- ===== CONTACTO ===== -->
     <section id="contacto" class="section">
       <div class="container contact">
         <h2 class="section__title">Contacto</h2>
-        <p class="section__lead">¿Tienes un evento o antojo grande? Hablemos.</p>
+        <p class="section__lead">¿Tienes un evento o un antojo grande? Hablemos.</p>
 
         <div class="contact__grid">
-          <a class="btn btn--whatsapp" id="whatsappBtn" href="#" rel="noopener">Escríbenos por WhatsApp</a>
-          <a class="btn btn--ghost" href="https://www.instagram.com/deesbreads/" target="_blank" rel="noopener">DM en Instagram</a>
+          <a class="btn btn--whatsapp" id="whatsappBtn" href="#" rel="noopener">
+            Escríbenos por WhatsApp
+          </a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container footer__inner">
-      <span>© <span id="year"></span> Dee’s Breads — Hecho con amor. | Webpage by <a href="https://chepot87.github.io/Norvak-Version-B/" target="_blank" rel="noopener">Norvak</a></span>
+      <span>
+        © <span id="year"></span> Dee’s Breads — Hecho con amor. | Webpage by
+        <a href="https://chepot87.github.io/Norvak-Version-B/" target="_blank" rel="noopener">
+          Norvak
+        </a>
+      </span>
       <a href="#top" class="top">Volver arriba ↑</a>
     </div>
   </footer>
 
-  <!-- JS -->
   <script src="script.js" defer></script>
 </body>
 </html>

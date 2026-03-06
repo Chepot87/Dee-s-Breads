@@ -1,24 +1,45 @@
-// Navegación móvil
-const toggle = document.querySelector('.nav__toggle');
-const menu = document.querySelector('.nav__menu');
-if (toggle && menu){
-  toggle.addEventListener('click', () => {
-    const open = menu.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+// =========================
+// ELEMENTOS BASE
+// =========================
+const navToggle = document.querySelector(".nav__toggle");
+const navMenu = document.querySelector(".nav__menu");
+const navLinks = document.querySelectorAll(".nav__menu a");
+const yearEl = document.getElementById("year");
+const preorderForm = document.getElementById("preorderForm");
+const whatsappBtn = document.getElementById("whatsappBtn");
+
+// Cambia este número por el de Dee
+// Formato internacional, sin espacios ni símbolos
+const WHATSAPP_NUMBER = "17875551234";
+
+// =========================
+// NAV MÓVIL
+// =========================
+if (navToggle && navMenu) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = navMenu.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+    });
   });
 }
 
-// Año dinámico
-document.getElementById('year').textContent = new Date().getFullYear();
+// =========================
+// AÑO DINÁMICO
+// =========================
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
 
-// WhatsApp prellenado + envío de pre-orden
-const preorderForm = document.getElementById('preorderForm');
-const waBtn = document.getElementById('whatsappBtn');
-
-// Cambia este número por el de Dee (formato internacional, sin espacios ni guiones)
-const WHATSAPP_NUMBER = '17875551234';
-
-function buildOrderMessage(data){
+// =========================
+// WHATSAPP
+// =========================
+function buildOrderMessage(data) {
   return `¡Hola Dee! Quiero hacer una pre-orden:
 • Nombre: ${data.nombre}
 • Contacto: ${data.contacto}
@@ -29,33 +50,37 @@ function buildOrderMessage(data){
 ¿Disponibilidad y precio? Gracias 🙏`;
 }
 
-function openWhatsApp(message){
-  const encoded = encodeURIComponent(message);
-  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`;
-  window.open(url, '_blank', 'noopener');
+function openWhatsApp(message) {
+  const encodedMessage = encodeURIComponent(message);
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+  window.open(url, "_blank", "noopener");
 }
 
-if (preorderForm){
-  preorderForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const data = Object.fromEntries(new FormData(preorderForm).entries());
-    const msg = buildOrderMessage(data);
-    openWhatsApp(msg);
+// =========================
+// FORMULARIO DE PRE-ORDEN
+// =========================
+if (preorderForm) {
+  preorderForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(preorderForm);
+    const data = Object.fromEntries(formData.entries());
+    const message = buildOrderMessage(data);
+
+    openWhatsApp(message);
   });
 }
 
-if (waBtn){
-  waBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    const msg = `¡Hola Dee! Vengo del website y quiero preguntar por el menú/fechas de meet-up.`;
-    openWhatsApp(msg);
+// =========================
+// BOTÓN DE WHATSAPP GENERAL
+// =========================
+if (whatsappBtn) {
+  whatsappBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const message =
+      "¡Hola Dee! Vengo del website y quiero preguntar por el menú, disponibilidad o fechas de meet-up.";
+
+    openWhatsApp(message);
   });
 }
-
-// Cierre del menú al hacer clic en un enlace (mejor UX)
-document.querySelectorAll('.nav__menu a').forEach(a => {
-  a.addEventListener('click', () => {
-    menu.classList.remove('open');
-    toggle.setAttribute('aria-expanded', 'false');
-  });
-});
